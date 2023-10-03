@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
     <!--/main-container/start-->
     <div class="main-container">
@@ -19,11 +21,13 @@
                 <div class="box-1-container">
                     <!--/logo container/start-->
                     <div class="logo-container">
-                        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/flipkart-095e08.svg" class="img">
+                        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/flipkart-095e08.svg"
+                            class="img">
                         <div class="sub-name">
                             <span class="explore">Explore</span>
                             <span class="plus">plus</span>
-                            <span><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/plus-brand-bc165b.svg"></span>
+                            <span><img
+                                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/plus-brand-bc165b.svg"></span>
                         </div>
                     </div>
                     <!--/logo container/End-->
@@ -39,17 +43,25 @@
                         <i class="fa-solid fa-shop icon"></i>
                         <span class="seller-content">Become a Seller</span>
                     </div>
-                    <div class="Sign-in main">
+                    <div class="sign-in main js-sign-in" onmouseover="signInBox()" onmouseout="signOutBox()">
                         <i class="fa-solid fa-user icon"></i>
                         <span class="sign-content">Sign in</span>
-                        <i class="fa-solid fa-angle-down arrow-icon"></i>
+                        <i class="fa-solid fa-angle-down sign-icon"></i>
+                        <!--/sign box/start-->
+                        <div class="sign-in-container">
+
+                        </div>
+                        <!--/sign box/End-->
                     </div>
                     <div class="cart main">
                         <i class="fa-solid fa-cart-shopping icon"></i>
                         <span class="cart-content">Cart</span>
                     </div>
-                    <div class="menu main">
-                        <i class="fa-solid fa-ellipsis-vertical icon"></i>
+                    <div class="menu main js-menu" onmouseover="menuInBox()" onmouseout="menuOutBox()">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <div class="menu-container">
+
+                        </div>
                     </div>
                 </div>
                 <!--/Box-2/End-->
@@ -57,6 +69,25 @@
         </div>
     </div>
     <script>
+        // sign box //
+        function signInBox() {
+            const buttonElement = document.querySelector('.js-sign-in');
+            buttonElement.classList.add('sign-box');
+        }
+        function signOutBox() {
+            const buttonElement = document.querySelector('.js-sign-in');
+            buttonElement.classList.remove('sign-box');
+        }
+        // menu box //
+        function menuInBox() {
+            const buttonElement = document.querySelector('.js-menu');
+            buttonElement.classList.add('menu-box');
+        }
+        function menuOutBox() {
+            const buttonElement = document.querySelector('.js-menu');
+            buttonElement.classList.remove('menu-box');
+        }
     </script>
 </body>
+
 </html>

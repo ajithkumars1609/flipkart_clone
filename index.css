@@ -25,6 +25,7 @@
     justify-content: space-around;
     align-items: center;
 }
+/* box1 -star */
 .box-1-container{
     width: 1000px;
     height: 100%;
@@ -80,12 +81,13 @@ input{
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+/* box 1 End */
 /* box 2  */
 .box-2-container{
-    width: 540px;
+    width: 600px;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .box-2-container .main{
@@ -95,6 +97,60 @@ input{
     margin-right: 10px;
 }
 /* cart section arrow icon*/
-.arrow-icon{
-    margin-left: 5px;
+.sign-icon{
+    transition: 0.5s;
+}
+.sign-in{
+    position: relative;
+}
+.sign-in:hover{
+    background-color: #1C41D6;
+    border-radius: 10px;
+    color: white;
+}
+/* sign in hover to mouse hover */
+.sign-in:hover .sign-icon{
+    transform: rotate(180deg);
+}
+/* sign box start */
+.sign-box .sign-in-container{
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 43px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+}
+.sign-in-container{
+    display: none;
+}
+/* sign box End */
+.menu{
+    margin-right: 5px;
+    position: relative;
+}
+/* menu box hover  */
+.menu:hover{
+    border: none;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.menu-box .menu-container{
+    display: block;
+    width: 250px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top: 43px;
+    left: -200px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+
+}
+.menu-container{
+    display: none;
 }
